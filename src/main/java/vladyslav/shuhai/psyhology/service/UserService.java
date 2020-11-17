@@ -23,8 +23,8 @@ public class UserService {
     private UserRepository userRepository;
 @Autowired
 private EventService eventService;
-@Autowired
-private MailSender mailSender;
+//@Autowired
+//private MailSender mailSender;
     public void create(UserRequest request){
         userRepository.save(register(null,request));
     }
@@ -80,8 +80,8 @@ private MailSender mailSender;
                 "\nEmail: "+request.getEmail()+"\nНомер телефону: "+request.getPhoneNumber()+
                 "\nЗаписався на групу: "+groupNameStr+
                 "\nСписок групи: "+eventService.findById(request.getEventId().get(0)).getUsers().toString()) + user;
-        mailSender.send("mshugay@gmail.com","ЗАПИС на групу",adminMessage );
-        mailSender.send(request.getEmail(),"Реєстрація на групове заняття: "+groupNameStr,customerMessage);
+     //   mailSender.send("mshugay@gmail.com","ЗАПИС на групу",adminMessage );
+      //  mailSender.send(request.getEmail(),"Реєстрація на групове заняття: "+groupNameStr,customerMessage);
         return user;
     }
     private User findByEmail(String email)  {

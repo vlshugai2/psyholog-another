@@ -5,6 +5,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.MediaType;
 import springfox.documentation.builders.RequestHandlerSelectors;
+import springfox.documentation.service.ApiKey;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
@@ -28,7 +29,10 @@ public class SwaggerConfig {
                         .basePackage("vladyslav.shuhai.psyhology.controller"))
                 .build()
                 .consumes(Sets.newHashSet(MediaType.APPLICATION_JSON_VALUE))
-                .produces(Sets.newHashSet(MediaType.APPLICATION_JSON_VALUE));
-
+                .produces(Sets.newHashSet(MediaType.APPLICATION_JSON_VALUE))
+                .securitySchemes(Arrays.asList(apiKey()));
+    }
+    private ApiKey apiKey() {
+        return new ApiKey("token", "Authorization", "header");
     }
 }

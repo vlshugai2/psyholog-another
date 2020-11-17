@@ -16,7 +16,7 @@ public class NewsletterController {
     private NewsletterService newsletterService;
 
     @PostMapping("/subscribe")
-    public final void create(@Valid @RequestBody final NewsletterRequest request) {
+    public final void create(@Valid @RequestBody final NewsletterRequest request) throws Exception {
         newsletterService.create(request);
     }
 
