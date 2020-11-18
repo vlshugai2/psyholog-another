@@ -28,5 +28,5 @@ jobs:
       with:
         app-name: 'psyholog'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_c2bc7efe39bc455da968b19f3f5b95aa }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_bcedc73faab945158c758e1d76e54464 }}
         package: '${{ github.workspace }}/target/*.war'
