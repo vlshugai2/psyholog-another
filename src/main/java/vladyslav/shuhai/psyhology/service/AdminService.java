@@ -1,6 +1,7 @@
 package vladyslav.shuhai.psyhology.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -26,7 +27,8 @@ public class AdminService implements UserDetailsService {
     @Autowired
     private AuthenticationManager authenticationManager;
     @Autowired
-    public JwtTokenTool jwtTokenTool;
+    @Lazy
+    private JwtTokenTool jwtTokenTool;
     @Autowired
     private BCryptPasswordEncoder encoder;
     private Admin findByUsername(String username)  {
