@@ -30,6 +30,7 @@ public class AdminService implements UserDetailsService {
     @Lazy
     private JwtTokenTool jwtTokenTool;
     @Autowired
+    @Lazy
     private BCryptPasswordEncoder encoder;
     private Admin findByUsername(String username)  {
         return adminRepository.findByUsername(username).orElseThrow(() -> new UsernameNotFoundException("User with name " + username + " not exists"));
