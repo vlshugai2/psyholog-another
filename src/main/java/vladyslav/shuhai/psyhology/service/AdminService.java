@@ -26,7 +26,7 @@ public class AdminService implements UserDetailsService {
     @Autowired
     private AuthenticationManager authenticationManager;
     @Autowired
-    private JwtTokenTool jwtTokenTool;
+    public JwtTokenTool jwtTokenTool;
     @Autowired
     private BCryptPasswordEncoder encoder;
     private Admin findByUsername(String username)  {

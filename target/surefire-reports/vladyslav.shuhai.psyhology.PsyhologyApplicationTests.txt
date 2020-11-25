@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: vladyslav.shuhai.psyhology.PsyhologyApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 102.467 s - in vladyslav.shuhai.psyhology.PsyhologyApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 69.469 s - in vladyslav.shuhai.psyhology.PsyhologyApplicationTests
